@@ -6,7 +6,7 @@ const Calculator = () => {
   const clickSoundRef = useRef(null);
 
   useEffect(() => {
-    clickSoundRef.current = new Audio('/sounds.mp3');
+    clickSoundRef.current = new Audio(process.env.PUBLIC_URL + '/sounds.mp3');
   }, []);
 
   const playClickSound = () => {
